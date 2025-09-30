@@ -1,16 +1,98 @@
-# flutter_create_state_practice_kuznetsovdd
 
-A new Flutter project.
+<img width="806" height="636" alt="Снимок экрана 2025-09-30 в 11 25 51" src="https://github.com/user-attachments/assets/8a761289-fd0d-4c15-9087-eb461588c53c" />
 
-## Getting Started
+Отчёт по практической работе №4
 
-This project is a starting point for a Flutter application.
+Использованные виджеты
 
-A few resources to get you started if this is your first Flutter project:
+Основные виджеты приложения:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+MaterialApp - корневой виджет Material Design приложения
+Scaffold - базовая структура экрана с AppBar и body
+AppBar - верхняя панель навигации с заголовком "Практика №4"
+StatefulWidget (MyHomePage) - виджет с изменяемым состоянием
+Center - виджет для центрирования дочерних элементов
+Column - вертикальная компоновка элементов
+Text - отображение текста счётчика
+ElevatedButton - кнопки с эффектом поднятия
+Container - контейнеры для группировки и стилизации кнопок
+SizedBox - создание отступов между элементами
+Специфические виджеты StatefulWidget:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+MyHomePage - наследует от StatefulWidget
+_MyHomePageState - класс состояния, управляющий логикой приложения
+Реализация обновления состояния
+
+Архитектура состояния:
+
+Приложение использует парадигму StatefulWidget для управления изменяемым состоянием:
+
+```dart
+class _MyHomePageState extends State<MyHomePage> {
+  int counter = 0; // Переменная состояния
+  
+  void _incrementCounter() {
+    setState(() {    // Метод для обновления UI
+      counter++;     // Изменение состояния
+    });
+  }
+}
+```
+Механизм setState():
+
+setState() - ключевой метод для уведомления Flutter об изменении состояния
+При вызове setState() Flutter перестраивает дерево виджетов
+Обновляется только изменённая часть интерфейса (текст счётчика)
+Обеспечивается реактивность приложения
+Жизненный цикл состояния:
+
+Инициализация counter = 0
+Пользовательское взаимодействие (нажатие кнопки)
+Вызов setState() с новой логикой
+Перерисовка виджета с обновлёнными данными
+Отображение нового значения счётчика
+Обрабатываемые события
+
+1. Событие короткого нажатия (onPressed)
+
+Кнопка "Увеличить":
+
+Обработчик: _incrementCounter()
+Действие: увеличение счётчика на +1
+Использование: onPressed: _incrementCounter
+Кнопка "Сбросить":
+
+Обработчик: _resetCounter()
+Действие: сброс счётчика к 0
+Использование: onPressed: _resetCounter
+2. Событие долгого нажатия (onLongPress)
+
+Кнопка "Увеличить":
+
+Обработчик: _incrementCounterByTen()
+Действие: увеличение счётчика на +10
+Использование: onLongPress: _incrementCounterByTen
+Визуальная подсказка: текст "Долгое нажатие: +10"
+
+3. События перерисовки UI
+
+Автоматическая перерисовка при вызове setState()
+Изменение текста в реальном времени
+Сохранение состояния между перерисовками
+Особенности реализации событий
+
+Разделение ответственности:
+
+Каждое событие обрабатывается отдельным методом
+Чёткое разделение логики увеличения и сброса
+Возможность легкого расширения функционала
+Обратная связь пользователю:
+
+Мгновенное обновление интерфейса
+Визуальные подсказки для жестов
+Единообразное поведение кнопок
+Обработка ошибок:
+
+Гарантированная целостность состояния
+Предсказуемое поведение при множественных нажатиях
+Корректная работа с граничными значениями
