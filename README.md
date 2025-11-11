@@ -65,6 +65,8 @@ Realtime Subscriptions: ✅
 
 <img width="1220" height="826" alt="Снимок экрана 2025-11-11 в 13 42 53" src="https://github.com/user-attachments/assets/8ae385c5-b5a7-4b5c-a6e4-9258b85e3263" />
 
+<img width="1510" height="946" alt="image" src="https://github.com/user-attachments/assets/8339f2e7-4d38-410e-a73b-01f17a312871" />
+
 ## 🐛 Решенные проблемы
 
 ### Проблемa Решение
