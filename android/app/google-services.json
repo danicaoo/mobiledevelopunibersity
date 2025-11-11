@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "860700558221",
+    "project_id": "notes-app-kuznetsov-ffe77",
+    "storage_bucket": "notes-app-kuznetsov-ffe77.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:860700558221:android:37096406ba78f7972773c4",
+        "android_client_info": {
+          "package_name": "com.example.firebase_notes_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnXLocLm17hXFP3whB5SvNbSUgMVcakss"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
