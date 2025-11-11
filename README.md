@@ -1,16 +1,86 @@
-# firebase_notes_app
+# 📱 Firebase Notes App
 
-A new Flutter project.
+**Полнофункциональное приложение для управления заметками с синхронизацией в реальном времени через Firebase Firestore**
+---
 
-## Getting Started
+## 🎯 О проекте
 
-This project is a starting point for a Flutter application.
+**Firebase Notes App** - это кроссплатформенное мобильное приложение, разработанное в рамках практического занятия №8 по дисциплине "Программирование корпоративных систем". Приложение демонстрирует полную интеграцию Flutter с Firebase Cloud Firestore, реализуя все CRUD-операции с синхронизацией в реальном времени.
 
-A few resources to get you started if this is your first Flutter project:
+### 📚 Учебные цели:
+- Освоить подключение Flutter-приложения к Firebase
+- Реализовать полный цикл CRUD-операций
+- Настроить правила безопасности Firestore
+- Отработать работу с жестами и навигацией
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🚀 Функциональность
+
+### ✅ Реализованные возможности:
+
+| Функция | Статус | Описание |
+|---------|--------|-----------|
+| 📝 Создание заметок | ✅ | Диалоговое окно с валидацией |
+| 👁️ Просмотр списка | ✅ | Real-time обновления через StreamBuilder |
+| ✏️ Редактирование | ✅ | Тап по карточке для изменения |
+| 🗑️ Удаление | ✅ | Два способа: кнопка и подтверждение |
+| ☁️ Синхронизация | ✅ | Автоматическая с Firestore |
+
+
+## 🛠 Технологии
+
+### 📱 Frontend:
+```yaml
+Flutter: 3.19.0
+Dart: 3.3.0
+Material Design 3: ✅
+Cupertino Icons: ^1.0.2
+```
+
+
+### 🔥 Backend & Database:
+
+```yaml
+Firebase Core: ^2.15.0
+Cloud Firestore: ^4.9.0
+Firebase Auth: Готово для подключения
+Uuid: ^4.2.1
+```
+
+## 📸 Скриншоты
+
+### 🏠 Главный экран
+
+<img width="1211" height="825" alt="Снимок экрана 2025-11-11 в 11 36 04" src="https://github.com/user-attachments/assets/7fa78d94-557e-4a5d-86ca-996e4ee32fda" />
+
+Список заметок с реальным временем обновления
+
+### ➕ Создание заметки
+
+<img width="1215" height="819" alt="Снимок экрана 2025-11-11 в 11 36 18" src="https://github.com/user-attachments/assets/396714c9-c043-475c-ac1a-5103278cb1fc" />
+
+Диалоговое окно с валидацией полей
+
+### ✏️ Редактирование
+
+<img width="1206" height="815" alt="Снимок экрана 2025-11-11 в 11 38 41" src="https://github.com/user-attachments/assets/2ee14d88-5bba-46a9-b0b3-c2195d07547f" />
+
+Предзаполненная форма редактирования
+
+### 🗑️ Удаление
+
+<img width="1220" height="831" alt="Снимок экрана 2025-11-11 в 11 36 10" src="https://github.com/user-attachments/assets/4867c277-5ea4-459e-bc1e-5509bde22708" />
+
+Подтверждение удаления с Snackbar
+
+### FireBase
+
+<img width="1504" height="836" alt="Снимок экрана 2025-11-11 в 12 09 13" src="https://github.com/user-attachments/assets/2aeaf8c6-ba53-4200-a221-c1b4a197c018" />
+
+<img width="1220" height="825" alt="Снимок экрана 2025-11-11 в 12 10 46" src="https://github.com/user-attachments/assets/03c676c1-0c31-4668-b03f-6ac011749be9" />
+
+## 🐛 Известные проблемы:
+
+В debug-режиме Flutter Web наблюдаются ошибки "Cannot send Null" (не влияют на функциональность)
+Требуется ручная настройка measurementId для Web-версии
